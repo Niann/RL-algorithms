@@ -1,5 +1,6 @@
 import random
 from collections import deque
+import numpy as np
 
 class ReplayMemory:
 
@@ -14,9 +15,10 @@ class ReplayMemory:
 
     def sample(self, size):
         minibatch = random.sample(self.buffer, size)
-        states = [data[0] for data in minibatch]
-        actions = [data[1] for data in minibatch]
-        rewards = [data[2] for data in minibatch]
-        next_states = [data[3] for data in minibatch]
-        dones = [data[4] for data in minibatch]
+        states = np.array([data[0] for data in minibatch])
+        actions = np.array([data[1] for data in minibatch])
+        rewards = np.array([data[2] for data in minibatch])
+        next_states = np.array([data[3] for data in minibatch])
+        dones = np.array([data[4] for data in minibatch])
+        
         return states, actions, rewards, next_states, dones
