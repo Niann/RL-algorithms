@@ -7,6 +7,7 @@
 
 #### Currently implemented algorithms:
 * Double DQN
+* Double DQN with dueling network
 * REINFORCE with Monte Carlo baseline
 
 #### Note:
