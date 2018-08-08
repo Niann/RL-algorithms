@@ -9,6 +9,7 @@
 * Double DQN
 * Double DQN with dueling network
 * REINFORCE with Monte Carlo baseline
+* PPO
 
 #### Note:
 The network architecture is quite arbitrary. I made it randomly large so that I can quickly test on different environment.
